@@ -1,14 +1,14 @@
 @font-face {
     font-family: UbuntuBold;
-    src: url(assets/fonts/Ubuntu-Bold.ttf);
+    src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
 @font-face {
     font-family: UbuntuMedium;
-    src: url(assets/fonts/Ubuntu-Medium.ttf);
+    src: url(/assets/fonts/Ubuntu-Medium.ttf);
 }
 @font-face {
     font-family: UbuntuRegular;
-    src: url(assets/fonts/Ubuntu-Regular.ttf);
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
 }
 body{
     margin:0;
@@ -19,7 +19,7 @@ body{
     justify-content: center;
     background-color:hsl(215, 100%, 97%);
 }
-.container{
+.outer-container{
     height:100vh;
     width:100vw;
     background-color:hsl(0, 0%, 100%);
@@ -37,18 +37,58 @@ body{
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center center;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: start;
+    padding:0rem 3rem 0rem 3rem;
 }
 .col-2{
     flex:70%;
 }
+/*CSS for left column tabs mobile*/
+    .pg-num{
+        display:flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        color:hsl(231, 100%, 99%);
+        padding:4rem 0.6rem 0rem 0.6rem;
+    }
+    .pg-num span{
+        width:30px;
+        height:30px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: UbuntuBold;
+        outline:2px solid hsl(231, 100%, 99%);
+        border-radius:50px;
+    }
+    .num-desc{
+        margin-left:1rem;
+    }
+    .num-step{
+        font-family: UbuntuRegular;
+        font-size:12px;
+        color:hsl(241, 100%, 86%);
+    }
+    .num-name{
+        padding-top:5px;
+        font-family: UbuntuBold;
+        font-size:14px;
+    }
 
-@media only screen and (min-width:768px){
-    
+@media only screen and (max-width:1279px){
+    .num-desc{
+        display:none;
+    }
 }
 
 @media only screen and (min-width:1280px){
     /*CSS for desktop containers*/
-    .container{
+    .outer-container{
         height:70vh;
         width:65vw;
         box-shadow:0px 20px 40px hsla(225, 12%, 87%, 0.801);
@@ -59,15 +99,52 @@ body{
         height:100%;
     }
     .col-1{
-        flex:30%;
+        flex:20%;
         border-radius:15px;
         background-image: url(/assets/images/bg-sidebar-desktop.svg);
         background-repeat:no-repeat;
         background-size:cover;
         background-position:bottom center;
+        display:flex;
+        flex-direction:column;
+        justify-content: start;
+        padding:0rem 3rem 0rem 3rem;
     }
     .col-2{
-        flex:70%;
+        flex:80%;
         border-radius:15px;
+    }
+    /*CSS for left column tabs desktop*/
+    .pg-num{
+        display:flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        color:hsl(231, 100%, 99%);
+        padding-top:2rem;
+    }
+    .pg-num span{
+        width:30px;
+        height:30px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: UbuntuBold;
+        outline:2px solid hsl(231, 100%, 99%);
+        border-radius:50px;
+    }
+    .num-desc{
+        margin-left:1rem;
+    }
+    .num-step{
+        font-family: UbuntuRegular;
+        font-size:12px;
+        color:hsl(241, 100%, 86%);
+    }
+    .num-name{
+        padding-top:5px;
+        font-family: UbuntuBold;
+        font-size:14px;
     }
 }
