@@ -20,31 +20,37 @@ body{
     background-color:hsl(215, 100%, 97%);
 }
 .container{
-    height:80vh;
-    width:80vw;
+    height:100vh;
+    width:100vw;
     background-color:hsl(0, 0%, 100%);
     border-radius:15px;
     box-shadow:0px 20px 40px hsla(225, 12%, 87%, 0.801);
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
 }
 .col-1,.col-2{
     height:100%;
 }
 .col-1{
     flex:30%;
-    background-color:blue;
+    background-image: url(/assets/images/bg-sidebar-mobile.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
 }
 .col-2{
     flex:70%;
 }
 
-@media only screen and (min-width:768px){}
+@media only screen and (min-width:768px){
+    
+}
 
 @media only screen and (min-width:1280px){
+    /*CSS for desktop containers*/
     .container{
-        height:80vh;
-        width:80vw;
+        height:70vh;
+        width:65vw;
         box-shadow:0px 20px 40px hsla(225, 12%, 87%, 0.801);
         flex-direction:row;
         padding:1rem;
@@ -55,6 +61,10 @@ body{
     .col-1{
         flex:30%;
         border-radius:15px;
+        background-image: url(/assets/images/bg-sidebar-desktop.svg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:bottom center;
     }
     .col-2{
         flex:70%;
