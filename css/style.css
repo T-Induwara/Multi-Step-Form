@@ -104,6 +104,7 @@ body{
     .col-2{
         flex:80%;
         border-radius:15px;
+        padding:0rem 3rem 0rem 3rem;
     }
     /*CSS for left column tabs desktop*/
     .pg-num{
@@ -121,5 +122,26 @@ body{
         padding-top:5px;
         font-family: UbuntuBold;
         font-size:14px;
+    }
+    /*CSS for form container*/
+    .form-container{
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items:start;
+    }
+    .bottom-row{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items:center;
+    }
+    .form-title{
+        font-family: UbuntuBold;
+    }
+    .form-desc{
+        font-family: UbuntuRegular;
     }
 }
