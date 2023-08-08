@@ -155,9 +155,17 @@ body{
         font-family: UbuntuRegular;
         color:hsl(230, 3%, 63%);
     }
-    .frm-label{
+    .frm-label,.frm-err-msgs{
         font-size:14px;
         font-family: UbuntuBold;
+    }
+    .frm-label-container{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+
     }
     .frm-input{
         width:100%;
@@ -169,6 +177,9 @@ body{
     }
     .frm-input:focus{
         outline:1px hsl(245, 32%, 44%) solid;
+    }
+    .frm-err-msgs{
+        color:red;
     }
     .frm-input-err{
         outline:1px red solid;
