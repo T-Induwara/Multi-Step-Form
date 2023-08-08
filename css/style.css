@@ -172,7 +172,7 @@ body{
         outline:1px hsl(255, 5%, 85%) solid;
         border:0px;
         padding:10px 0px;
-        margin-top:-10px;
+        margin-top:-1.5rem;
         border-radius:4px;
     }
     .frm-input:focus{
