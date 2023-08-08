@@ -278,4 +278,31 @@ body{
     .multi-bottom-row{
         width:100%;
     }
+    .plans-outer-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .plan{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .plan img{
+        width:35px;
+    }
+    .plan-details h3,.plan-details p{
+        margin:0px;
+    }
+    .plan-price{
+        display:flex;
+        flex-direction:row;
+        justify-content:start;
+        align-items:center;
+    }
+    .plan h3{
+        font-family: UbuntuBold;
+        color:hsl(215, 89%, 18%);
+    }
 }
