@@ -83,7 +83,7 @@ body{
         background-color:hsl(0, 0%, 100%);
     }
     .bottom-row{
-        width:100%;
+        width:90%;
         display:flex;
         flex-direction: row;
         justify-content: end;
@@ -169,6 +169,10 @@ body{
         margin-top:-5rem;
         padding:25px;
         border-radius:10px;
+    }
+    .bottom-row{
+        background-color:hsl(0, 0%, 100%);
+        padding:20px;
     }
 }
 
