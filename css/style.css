@@ -285,9 +285,17 @@ body{
         align-items:center;
     }
     .plan{
+        height:8rem;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
+        border:1px solid hsl(240, 3%, 86%);
+        padding:1rem;
+        border-radius:8px;
+    }
+    .plan-selected{
+        background-color:hsl(230, 75%, 98%);
+        border:1px solid hsl(245, 32%, 45%);
     }
     .plan img{
         width:35px;
@@ -300,9 +308,15 @@ body{
         flex-direction:row;
         justify-content:start;
         align-items:center;
+        font-family: UbuntuRegular;
+        color:hsl(240, 7%, 71%);
     }
     .plan h3{
         font-family: UbuntuBold;
         color:hsl(215, 89%, 18%);
+    }
+    .free-mon-txt{
+        font-family: UbuntuMedium;
+        font-size:12px;
     }
 }
