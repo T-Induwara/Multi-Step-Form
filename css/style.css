@@ -70,10 +70,105 @@ body{
         color:hsl(210, 100%, 15%) !important;
         background-color:hsl(206, 88%, 87%) !important;
     }
+    /*CSS for form container on mobile*/
+    .form-container{
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .upper-row{
+        width:80%;
+        background-color:hsl(0, 0%, 100%);
+    }
+    .bottom-row{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items:center;
+    }
+    form{
+        height:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    .form-title{
+        font-family: UbuntuBold;
+        color:hsl(213, 91%, 18%);
+    }
+    .form-desc{
+        font-family: UbuntuRegular;
+        color:hsl(230, 3%, 63%);
+    }
+    .frm-label,.frm-err-msgs{
+        font-size:14px;
+        font-family: UbuntuBold;
+    }
+    .frm-label-container{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+
+    }
+    .frm-input{
+        width:100%;
+        outline:1px hsl(255, 5%, 85%) solid;
+        border:0px;
+        padding:10px 0px;
+        margin-top:-1.5rem;
+        border-radius:4px;
+    }
+    .frm-input:focus{
+        outline:1px hsl(245, 32%, 44%) solid;
+    }
+    .frm-err-msgs{
+        color:red;
+    }
+    .frm-input-err{
+        outline:1px red solid;
+    }
+    .frm-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        padding-left: 10px;
+    }
+    .frm-input::-moz-placeholder { /* Firefox 19+ */
+        padding-left: 10px;
+    }
+    .frm-input:-ms-input-placeholder { /* IE 10+ */
+        padding-left: 10px;
+    }
+    .frm-input:-moz-placeholder { /* Firefox 18- */
+        padding-left: 10px;
+    }
+    .b-r-right-btn{
+        border:0px;
+        outline:0px;
+        background-color: hsl(215, 89%, 18%);
+        color:hsl(180, 100%, 98%);
+        border-radius:8px;
+        padding:1rem 2rem;
+        transition:0.6s;
+    }
+    .b-r-right-btn:hover{
+        background-color:hsl(215, 72%, 32%);
+        cursor:pointer;
+        transition:0.6s;
+    }
 
 @media only screen and (max-width:1279px){
     .num-desc{
         display:none;
+    }
+    .form-container{
+        background-color: hsl(215, 100%, 97%);
+    }
+    .upper-row{
+        margin-top:-5rem;
+        padding:25px;
+        border-radius:10px;
     }
 }
 
