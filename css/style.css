@@ -19,6 +19,11 @@ body{
     justify-content: center;
     background-color:hsl(215, 100%, 97%);
 }
+/*Spacial CSS for hiding elements*/
+.hide{
+    display:none !important;
+}
+/*Special CSS ending*/
 .outer-container{
     height:100vh;
     width:100vw;
