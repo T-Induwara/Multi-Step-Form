@@ -285,13 +285,21 @@ body{
         align-items:center;
     }
     .plan{
-        height:8rem;
+        height:10rem;
+        width:7rem;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
         border:1px solid hsl(240, 3%, 86%);
         padding:1rem;
         border-radius:8px;
+        transition:0.6s;
+    }
+    .plan:hover{
+        cursor:pointer;
+        transition:0.6s;
+        background-color:hsl(230, 75%, 98%);
+        border:1px solid hsl(245, 32%, 45%);
     }
     .plan-selected{
         background-color:hsl(230, 75%, 98%);
@@ -310,6 +318,7 @@ body{
         align-items:center;
         font-family: UbuntuRegular;
         color:hsl(240, 7%, 71%);
+        margin:5px 0px;
     }
     .plan h3{
         font-family: UbuntuBold;
