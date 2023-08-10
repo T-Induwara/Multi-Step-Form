@@ -297,6 +297,12 @@ body{
     .num-desc{
         display:none;
     }
+    .col-1{
+        height:30vh;
+    }
+    .col-2{
+        height:70vh;
+    }
     .form-container{
         background-color: hsl(215, 100%, 97%);
     }
