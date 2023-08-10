@@ -196,10 +196,10 @@ body{
     }
     /*CSS for plans container on mobile*/
     .multi-bottom-row{
-        width:100%;
+        width:90%;
     }
     .plan-container{
-        height:98%;
+        height:100%;
         display:flex;
         flex-direction:column;
         justify-content: space-between;
@@ -291,7 +291,11 @@ body{
         height:15px;
         border-radius:45px;
     }
-
+@media only screen and (min-width:768px){/*Special extra class for tablets*/
+    .multi-bottom-row{
+        width:94%;
+    }
+}
 @media only screen and (max-width:1279px){
     .num-desc{
         display:none;
@@ -306,11 +310,11 @@ body{
         background-color: hsl(215, 100%, 97%);
     }
     .upper-row{
-        margin-top:-5rem;
+        margin-top:-7rem;
         padding:25px;
         border-radius:10px;
     }
-    .bottom-row{
+    .bottom-row,.multi-bottom-row{
         background-color:hsl(0, 0%, 100%);
         padding:20px;
     }
@@ -471,6 +475,9 @@ body{
         border-radius:45px;
         margin:0rem 1rem;
         padding:0px 4px;
+    }
+    .select-btn-outer-container:hover{
+        cursor:pointer;
     }
     .select-btn{
         background-color:hsl(180, 100%, 100%);
