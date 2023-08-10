@@ -318,9 +318,6 @@ body{
     .plan-container{
         background-color: hsl(215, 81%, 96%);
     }
-    .plan-container .upper-row{
-        margin-top:0rem;
-    }
     .plan-details{
         margin-left:1rem;
     }
