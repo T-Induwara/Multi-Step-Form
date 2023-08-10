@@ -213,7 +213,6 @@ body{
         margin-top:1rem;
     }
     .plan{
-        height:5rem;
         width:90%;
         display:flex;
         flex-direction: row;
@@ -256,7 +255,7 @@ body{
     }
     .free-mon-txt{
         font-family: UbuntuMedium;
-        font-size:12px;
+        font-size:14px;
     }
     .mon-annual-selection{
         background-color:hsl(230, 75%, 98%);
@@ -265,7 +264,7 @@ body{
         flex-direction:row;
         justify-content: center;
         align-items:center;
-        margin:2rem 0rem;
+        margin:1rem 0rem;
     }
     .mon-annual-selection p{
         font-family: UbuntuBold;
