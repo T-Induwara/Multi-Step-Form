@@ -288,7 +288,7 @@ form{
     height:15px;
     border-radius:45px;
 }
-/*CSS for add-ons container*/
+/*CSS for add-ons container on mobile*/
 .adds-container{
     height:100%;
     display:flex;
@@ -493,164 +493,19 @@ form{
         cursor:pointer;
     }
     /*CSS for add-ons container*/
-    .adds-container{
-        height:100%;
-        display:flex;
-        flex-direction:column;
-        justify-content: space-between;
-        align-items:center;
-    }
-    .addons-outer-container{
-        display:flex;
-        flex-direction:column;
-        justify-content: space-between;
-        align-items:center;
-        margin-top:1rem;
-    }
     .addons{
         width:95%;
-        display:flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items:center;
-        border:1px solid hsl(240, 3%, 86%);
-        padding:1rem;
-        margin:6px 0px;
-        border-radius:8px;
-        transition:0.6s;
-    }
-    .addons:hover{
-        cursor:pointer;
-        transition:0.6s;
-        background-color:hsl(230, 75%, 98%);
-        border:1px solid hsl(245, 32%, 45%);
-    }
-    .addons-selected{
-        background-color:hsl(230, 75%, 98%);
-        border:1px solid hsl(245, 32%, 45%);
-    }
-    .addons-details h3,.addons-details p{
-        margin:0px;
     }
     .addons-details{
         width:100%;
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-    }
-    .addons-txts{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
     }
     .addons-txts input{
         transform: scale(1.5);
-        accent-color: hsl(242, 92%, 62%);
-    }
-    .addons-txts input:hover{
-        cursor:pointer;
     }
     .addons-txt-desc{
         margin-left:1rem;
     }
     .addons-desc{
-        font-family: UbuntuRegular;
         font-size:12px;
-        color:hsl(231, 4%, 62%);
-    }
-    .addons-price{
-        display:flex;
-        flex-direction:row;
-        justify-content:start;
-        align-items:center;
-        font-family: UbuntuRegular;
-        color:hsl(244, 34%, 48%);/*CSS for add-ons container*/
-    .adds-container{
-        height:100%;
-        display:flex;
-        flex-direction:column;
-        justify-content: space-between;
-        align-items:center;
-    }
-    .addons-outer-container{
-        display:flex;
-        flex-direction:column;
-        justify-content: space-between;
-        align-items:center;
-        margin-top:1rem;
-    }
-    .addons{
-        width:95%;
-        display:flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items:center;
-        border:1px solid hsl(240, 3%, 86%);
-        padding:1rem;
-        margin:6px 0px;
-        border-radius:8px;
-        transition:0.6s;
-    }
-    .addons:hover{
-        cursor:pointer;
-        transition:0.6s;
-        background-color:hsl(230, 75%, 98%);
-        border:1px solid hsl(245, 32%, 45%);
-    }
-    .addons-selected{
-        background-color:hsl(230, 75%, 98%);
-        border:1px solid hsl(245, 32%, 45%);
-    }
-    .addons-details h3,.addons-details p{
-        margin:0px;
-    }
-    .addons-details{
-        width:100%;
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-    }
-    .addons-txts{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-    }
-    .addons-txts input{
-        transform: scale(1.5);
-        accent-color: hsl(242, 92%, 62%);
-    }
-    .addons-txts input:hover{
-        cursor:pointer;
-    }
-    .addons-txt-desc{
-        margin-left:1rem;
-    }
-    .addons-desc{
-        font-family: UbuntuRegular;
-        font-size:12px;
-        color:hsl(231, 4%, 62%);
-    }
-    .addons-price{
-        display:flex;
-        flex-direction:row;
-        justify-content:start;
-        align-items:center;
-        font-family: UbuntuRegular;
-        color:hsl(244, 34%, 48%);
-        margin:5px 0px;
-    }
-    .addons h3{
-        font-family: UbuntuBold;
-        color:hsl(215, 89%, 18%);
-    }
-        margin:5px 0px;
-    }
-    .addons h3{
-        font-family: UbuntuBold;
-        color:hsl(215, 89%, 18%);
     }
 }
