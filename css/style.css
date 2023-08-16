@@ -107,6 +107,7 @@ body{
     .form-desc{
         font-family: UbuntuRegular;
         color:hsl(230, 3%, 63%);
+        margin:-1rem 0rem 1rem 0rem;
     }
     .frm-label,.frm-err-msgs{
         font-size:14px;
@@ -410,7 +411,7 @@ body{
         cursor:pointer;
     }
     /*CSS for add-ons container*/
-    .addons-container{
+    .adds-container{
         height:100%;
         display:flex;
         flex-direction:column;
@@ -425,7 +426,7 @@ body{
         margin-top:1rem;
     }
     .addons{
-        width:90%;
+        width:95%;
         display:flex;
         flex-direction: row;
         justify-content: start;
@@ -463,7 +464,11 @@ body{
         align-items:center;
     }
     .addons-txts input{
-        outline:1px solid red;
+        transform: scale(1.5);
+        accent-color: hsl(242, 92%, 62%);
+    }
+    .addons-txts input:hover{
+        cursor:pointer;
     }
     .addons-txt-desc{
         margin-left:1rem;
