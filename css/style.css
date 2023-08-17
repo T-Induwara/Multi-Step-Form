@@ -513,33 +513,33 @@ form{
         height:100%;
         display:flex;
         flex-direction:column;
-        justify-content: space-between;
         align-items:center;
+        justify-content: space-between;
     }
     .summary-outer-container{
         background-color:hsl(230, 75%, 98%);
         padding:1rem;
         border-radius:15px;
     }
-    .summary-top-txt{
+    .summary-top-txt,.summary-addon,.summary-bottom-txt{
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:space-between;
     }
-    .s-top-left{
+    .s-top-left,.summary-mid-txt{
         display:flex;
         flex-direction:column;
         align-items:start;
         justify-content:center;
     }
-    .s-top-right{
+    .s-top-right,.sum-addon-price-section,.sum-bottom-right{
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:end;
     }
-    .s-top-plan-time{
+    .s-top-plan-time,.sum-bottom-left{
         display:flex;
         flex-direction:row;
         align-items:center;
@@ -548,41 +548,7 @@ form{
     .summary-container p{
         margin:0 !important;
     }
-    .summary-mid-txt{
-        display:flex;
-        flex-direction:column;
-        align-items:start;
-        justify-content:center;
-    }
     .summary-addon{
         width:100%;
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-between;
-    }
-    .sum-addon-price-section{
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:end;
-    }
-    .summary-bottom-txt{
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-between;
-    }
-    .sum-bottom-left{
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:start;
-    }
-    .sum-bottom-right{
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:end;
     }
 }
