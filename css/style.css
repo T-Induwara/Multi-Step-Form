@@ -516,7 +516,7 @@ form{
         align-items:center;
         justify-content: space-between;
     }
-    .summary-outer-container{
+    .summary-inner-container{
         background-color:hsl(230, 75%, 98%);
         padding:1rem;
         border-radius:15px;
@@ -526,6 +526,9 @@ form{
         flex-direction:row;
         align-items:center;
         justify-content:space-between;
+    }
+    .summary-bottom-txt{
+        padding:1rem;
     }
     .s-top-left,.summary-mid-txt{
         display:flex;
