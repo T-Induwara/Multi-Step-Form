@@ -508,5 +508,81 @@ form{
     .addons-desc{
         font-size:12px;
     }
-    
+    /*CSS for summary container*/
+    .summary-container{
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .summary-outer-container{
+        background-color:hsl(230, 75%, 98%);
+        padding:1rem;
+        border-radius:15px;
+    }
+    .summary-top-txt{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .s-top-left{
+        display:flex;
+        flex-direction:column;
+        align-items:start;
+        justify-content:center;
+    }
+    .s-top-right{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:end;
+    }
+    .s-top-plan-time{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:start;
+    }
+    .summary-container p{
+        margin:0 !important;
+    }
+    .summary-mid-txt{
+        display:flex;
+        flex-direction:column;
+        align-items:start;
+        justify-content:center;
+    }
+    .summary-addon{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .sum-addon-price-section{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:end;
+    }
+    .summary-bottom-txt{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .sum-bottom-left{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:start;
+    }
+    .sum-bottom-right{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:end;
+    }
 }
