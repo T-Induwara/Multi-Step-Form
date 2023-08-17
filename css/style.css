@@ -162,7 +162,7 @@ form{
     outline:0px;
     background-color: hsl(215, 89%, 18%);
     color:hsl(180, 100%, 98%);
-    border-radius:8px;
+    border-radius:5px;
     padding:1rem 1.5rem;
     transition:0.6s;
     font-family: UbuntuBold;
@@ -371,6 +371,92 @@ form{
     color:hsl(215, 89%, 18%);
     font-size:14px;
 }
+/*CSS for summary container on mobile*/
+.summary-container{
+    font-family: UbuntuRegular;
+    color:hsl(240, 5%, 64%);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-between;
+}
+.summary-outer-container{
+    margin-top:2rem;
+}
+.summary-inner-container{
+    background-color:hsl(230, 75%, 98%);
+    padding:1.5rem;
+    border-radius:15px;
+}
+.summary-top-txt,.summary-addon,.summary-bottom-txt{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+.summary-bottom-txt{
+    padding:1.5rem;
+}
+.s-top-left,.summary-mid-txt{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    justify-content:center;
+}
+.s-top-right,.sum-addon-price-section,.sum-bottom-right{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:end;
+}
+.s-top-plan-time,.sum-bottom-left{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:start;
+}
+.summary-container p{
+    margin:0;
+}
+.summary-hr{
+    border:1px solid hsl(230, 19%, 94%);
+    margin:0.5rem 0rem !important;
+}
+.summary-addon{
+    width:100%;
+    margin:0.5rem 0rem !important;
+}
+.s-top-plan-time p,.s-top-right p{
+    font-family: UbuntuMedium;
+    color:hsl(216, 66%, 17%);
+    font-size:18px;
+}
+.s-top-plan-change{
+    text-decoration:underline;
+}
+.sum-bottom-right{
+    font-family: UbuntuBold;
+    font-size:20px;
+    color:hsl(243, 62%, 55%);
+}
+.s-top-plan-change{
+    color:hsl(240, 5%, 57%);
+    margin:0.5rem 0rem !important;
+}
+.s-top-plan-change:hover{
+    cursor:pointer;
+}
+.confirm-btn{
+    background-color: hsl(244, 100%, 62%);
+    padding:1rem 1.5rem !important;
+    transition: 0.6s;
+}
+.confirm-btn:hover{
+    background-color: hsl(244, 100%, 67%);
+    transition: 0.6s;
+}
+
 
 @media only screen and (min-width:768px){/*Special extra class for tablets*/
     .multi-bottom-row{
@@ -396,7 +482,7 @@ form{
         background-color:hsl(0, 0%, 100%);
         padding:20px;
     }
-    .form-container,.plan-container,.adds-container{
+    .form-container,.plan-container,.adds-container,.summary-container{
         background-color: hsl(215, 81%, 96%);
     }
     .plan-details{
