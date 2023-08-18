@@ -51,5 +51,35 @@ var addBackBtn = document.getElementById("addons-back-btn");
 var addNextBtn = document.getElementById("addons-next-btn");
 
 //Summary  container variables
+var summaryPlan = document.getElementById("s-top-plan");
+var summaryDuration = document.getElementById("s-top-plantime");
+
+var planChange = document.getElementById("s-top-plan-change");
+
+var sumPlanPrice = document.getElementById("s-top-price");
+var sumPlanDuration = document.getElementById("s-top-time");
+
+//Summary addon1
+var sumAddon1 = document.getElementById("summary-addon-1");
+var sumAddon1Price = document.getElementById("sum-addon1-price");
+var sumAddon1Dur = document.getElementById("sum-addon1-time");
+
+//Summary addon2
+var sumAddon2 = document.getElementById("summary-addon-2");
+var sumAddon2Price = document.getElementById("sum-addon2-price");
+var sumAddon2Dur = document.getElementById("sum-addon2-price");
+
+//Summary addon3
+var sumAddon3 = document.getElementById("summary-addon-3");
+var sumAddon3Price = document.getElementById("sum-addon3-price");
+var sumAddon3Dur = document.getElementById("sum-addon3-price");
+
+var sumTotTime = document.getElementById("sum-bottom-time");
+var sumTotPrice = document.getElementById("sum-total-price");
+var sumTotDur = document.getElementById("sum-total-time");
+
+var sumBackBtn = document.getElementById("sumamry-back-btn");
+var sumNextBtn = document.getElementById("summary-confirm-btn");
+
 
 
