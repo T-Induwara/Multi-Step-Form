@@ -15,6 +15,8 @@ var frmPhone = document.getElementById("frm-phone").value;
 var frmNextBtn = document.getElementById("frm-next-btn");
 
 //Plan container variables
+var plan = 0;
+var duration;
 //Plan1
 var plan1 = document.getElementById("plan-1");
 //Plan2
@@ -32,5 +34,7 @@ var planBackBtn = document.getElementById("plan-back-btn");
 var planNextBtn = document.getElementById("plan-next-btn");
 
 //Addons container variables
+
+
 
 //Summary  container variables
