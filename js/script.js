@@ -35,6 +35,21 @@ var planNextBtn = document.getElementById("plan-next-btn");
 
 //Addons container variables
 
+//Addon1
+var addon1 = document.getElementById("addon-1");
+var addon1Check = document.getElementById("addon1-checkbox");
 
+//Addon2
+var addon2 = document.getElementById("addon-2");
+var addon2Check = document.getElementById("addon2-checkbox");
+
+//Addon3
+var addon3 = document.getElementById("addon-3");
+var addon3Check = document.getElementById("addon3-checkbox");
+
+var addBackBtn = document.getElementById("addons-back-btn");
+var addNextBtn = document.getElementById("addons-next-btn");
 
 //Summary  container variables
+
+
