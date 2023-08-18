@@ -282,6 +282,9 @@ form{
     margin:0rem 1rem;
     padding:0px 4px;
 }
+.select-btn-yr{
+    justify-content:end !important;
+}
 .select-btn{
     background-color:hsl(180, 100%, 100%);
     width:15px;

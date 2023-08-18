@@ -22,7 +22,11 @@ var plan2 = document.getElementById("plan-2");
 //Plan2
 var plan3 = document.getElementById("plan-3");
 
-
+var planDuBtn = document.getElementById("duration-btn");
+planDuBtn.onclick = function(){
+    console.log("dur btn clicked");
+    planDuBtn.classList.toggle("select-btn-yr")
+}
 
 var planBackBtn = document.getElementById("plan-back-btn");
 var planNextBtn = document.getElementById("plan-next-btn");
