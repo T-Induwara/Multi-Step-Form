@@ -41,28 +41,28 @@
                 </div>
             </div>
             <div class="col-2">
-                <div class="form-container hide" id="form-container">
+                <div class="form-container" id="form-container">
                     <div class="upper-row">
                         <h1 class="form-title">Personal info</h1>
                         <p class="form-desc">Please provide your name, email address, and phone number.</p>
                         <form action="#">
                             <div class="frm-label-container">
                                 <label for="name" class="frm-label">Name</label>
-                                <p class="frm-err-msgs" id="err-name">This field is required</p>
+                                <p class="frm-err-msgs hide" id="err-name">This field is required</p>
                             </div>
                             <br>
                             <input type="text" class="frm-input" id="frm-name" name="name" placeholder="e.g. Stephen King" required>
                             <br>
                             <div class="frm-label-container">
                                 <label for="email" class="frm-label">Email Address</label>
-                                <p class="frm-err-msgs" id="err-email">This field is required</p>
+                                <p class="frm-err-msgs hide" id="err-email">This field is required</p>
                             </div>
                             <br>
                             <input type="email" class="frm-input" id="frm-mail" name="email" placeholder="e.g. stephenking@torem.com" required>
                             <br>
                             <div class="frm-label-container">
                                 <label for="phone" class="frm-label">Phone Number</label>
-                                <p class="frm-err-msgs" id="err-phone">This field is required</p>
+                                <p class="frm-err-msgs hide" id="err-phone">This field is required</p>
                             </div>
                             <br>
                             <input type="tel" class="frm-input" id="frm-phone" name="phone" placeholder="e.g. +1 234 567 890" required>
@@ -187,7 +187,7 @@
                         <button class="b-r-right-btn" id="addons-next-btn">Next Step</button>
                     </div>
                 </div>
-                <div class="summary-container" id="summary-container">
+                <div class="summary-container hide" id="summary-container">
                     <div class="upper-row">
                         <h1 class="form-title">Finishing up</h1>
                         <p class="form-desc">Double-check everything looks OK before confirming.</p>

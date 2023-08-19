@@ -10,9 +10,21 @@ tab2.classList.add("active-num-col");
 
 //Form container variables
 var frmName = document.getElementById("frm-name").value;
+var frmNameError = document.getElementById("err-name");
+
 var frmEmail = document.getElementById("frm-mail").value;
+var frmMailError = document.getElementById("err-email");
+
 var frmPhone = document.getElementById("frm-phone").value;
+var frmPhError = document.getElementById("err-phone");
+
 var frmNextBtn = document.getElementById("frm-next-btn");
+
+frmNextBtn.addEventListener("click",function(){
+    if(frmName == "" || frmName == null){
+        frmNameError.classList.remove("hide");
+    }
+})
 
 //Plan container variables
 var plan = 0;
