@@ -6,23 +6,56 @@ var tab2 = document.getElementById("num-2");
 var tab3 = document.getElementById("num-3");
 var tab4 = document.getElementById("num-4");
 
-tab2.classList.add("active-num-col");
+//Main containers
+var formContainer = document.getElementById("form-container");
+var planContainer = document.getElementById("plan-container");
+var addsContainer = document.getElementById("adds-container");
+var summContainer = document.getElementById("summary-container");
+var thanksContainer = document.getElementById("thnx-container");
 
 //Form container variables
-var frmName = document.getElementById("frm-name").value;
+var formProgress = 3;
+
 var frmNameError = document.getElementById("err-name");
-
-var frmEmail = document.getElementById("frm-mail").value;
 var frmMailError = document.getElementById("err-email");
-
-var frmPhone = document.getElementById("frm-phone").value;
 var frmPhError = document.getElementById("err-phone");
 
 var frmNextBtn = document.getElementById("frm-next-btn");
 
 frmNextBtn.addEventListener("click",function(){
+    formProgress = 3;
+    //Reset form error messages
+    frmNameError.classList.add("hide");
+    frmMailError.classList.add("hide");
+    frmPhError.classList.add("hide");
+
+    //Assign form field values to js variables
+    var frmName = document.getElementById("frm-name").value;
+    var frmEmail = document.getElementById("frm-mail").value;
+    var frmPhone = document.getElementById("frm-phone").value;
+
+    //Checking if the form name field is empty
     if(frmName == "" || frmName == null){
         frmNameError.classList.remove("hide");
+        formProgress = formProgress - 1;
+    }
+
+    //Checking if the form email field is empty
+    if(frmEmail == "" || frmEmail == null ){
+        frmMailError.classList.remove("hide");
+        formProgress = formProgress - 1;
+    }
+
+    //Checking if the form phone field is empty
+    if(frmPhone == "" | frmPhone == null){
+        frmPhError.classList.remove("hide");
+        formProgress = formProgress - 1;
+    }
+
+    if(formProgress == 3){
+        console.log("Next page please. The count is " +formProgress);
+        tab1.classList.remove("active-num-col");
+        tab2.classList.add("active-num-col");
     }
 })
 

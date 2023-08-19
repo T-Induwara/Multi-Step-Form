@@ -112,6 +112,7 @@ form{
 .frm-label,.frm-err-msgs{
     font-size:14px;
     font-family: UbuntuBold;
+    margin:14px 0px;
 }
 .frm-label-container{
     width:100%;
@@ -125,11 +126,14 @@ form{
     outline:1px hsl(255, 5%, 85%) solid;
     border:0px;
     padding:10px 0px;
+    padding-left:10px;
+    margin-left:-5px;
     margin-top:-1.5rem;
     border-radius:4px;
 }
 .frm-input:focus{
     outline:1px hsl(245, 32%, 44%) solid;
+    padding-left:10px;
 }
 .frm-err-msgs{
     color:red;
