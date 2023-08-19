@@ -14,7 +14,7 @@ var summContainer = document.getElementById("summary-container");
 var thanksContainer = document.getElementById("thnx-container");
 
 //Form container variables
-var formProgress = 3;
+var formProgress = 3;//Form container counter
 
 var frmNameError = document.getElementById("err-name");
 var frmMailError = document.getElementById("err-email");
@@ -55,7 +55,9 @@ frmNextBtn.addEventListener("click",function(){
     if(formProgress == 3){
         console.log("Next page please. The count is " +formProgress);
         tab1.classList.remove("active-num-col");
+        formContainer.classList.add("hide");
         tab2.classList.add("active-num-col");
+        planContainer.classList.remove("hide");
     }
 })
 
