@@ -94,19 +94,28 @@ plan3.addEventListener("click",function(){
 var planDuBtn = document.getElementById("duration-btn");
 var planMonthly = document.getElementById("monthly");
 var planYearly = document.getElementById("yearly");
+var freeMonTxt1 = document.getElementById("plan1-free-txt");
+var freeMonTxt2 = document.getElementById("plan2-free-txt");
+var freeMonTxt3 = document.getElementById("plan3-free-txt");
 
-planDuBtn.onclick = function(){
+planDuBtn.addEventListener("click",function(){
     console.log("dur btn clicked");
     planDuBtn.classList.toggle("select-btn-yr")
     if(planDuBtn.classList.contains("select-btn-yr")){//Check wheather the plan duration button was clicked or not
         planMonthly.classList.remove("mon-active");
         planYearly.classList.add("mon-active");
+        freeMonTxt1.classList.remove("hide");//error
+        freeMonTxt2.classList.remove("hide");
+        freeMonTxt3.classList.remove("hide");
     }
     else{
         planMonthly.classList.add("mon-active");
         planYearly.classList.remove("mon-active");
+        freeMonTxt1.classList.add("hide");//error
+        freeMonTxt2.classList.add("hide");
+        freeMonTxt3.classList.add("hide");
     }
-}
+})
 
 var planBackBtn = document.getElementById("plan-back-btn");
 var planNextBtn = document.getElementById("plan-next-btn");
