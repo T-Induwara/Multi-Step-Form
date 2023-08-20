@@ -63,6 +63,7 @@ frmNextBtn.addEventListener("click",function(){
 
 //Plan container variables
 var plan = 0;
+var planProgress = 2;
 var duration;
 //Plan1
 var plan1 = document.getElementById("plan-1");
@@ -70,6 +71,25 @@ var plan1 = document.getElementById("plan-1");
 var plan2 = document.getElementById("plan-2");
 //Plan2
 var plan3 = document.getElementById("plan-3");
+
+plan1.addEventListener("click",function(){
+    plan1.classList.add("plan-selected");
+    plan2.classList.remove("plan-selected");
+    plan3.classList.remove("plan-selected");
+    plan = 1;
+})
+plan2.addEventListener("click",function(){
+    plan2.classList.add("plan-selected");
+    plan1.classList.remove("plan-selected");
+    plan3.classList.remove("plan-selected");
+    plan = 2;
+})
+plan3.addEventListener("click",function(){
+    plan3.classList.add("plan-selected");
+    plan1.classList.remove("plan-selected");
+    plan2.classList.remove("plan-selected");
+    plan = 1;
+})
 
 var planDuBtn = document.getElementById("duration-btn");
 planDuBtn.onclick = function(){
