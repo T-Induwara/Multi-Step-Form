@@ -64,13 +64,36 @@ frmNextBtn.addEventListener("click",function(){
 //Plan container variables
 var plan = 0;
 var planProgress = 2;
-var duration;
+var planPrice = 0
+var duration = 0;//If the duration is 1 = Monthly, If the duration is 2 = Yearly
+
 //Plan1
 var plan1 = document.getElementById("plan-1");
+var plan1Price = document.getElementById("plan1-p").innerHTML;
 //Plan2
 var plan2 = document.getElementById("plan-2");
+var plan2Price = document.getElementById("plan2-p").innerHTML;
 //Plan2
 var plan3 = document.getElementById("plan-3");
+var plan3Price = document.getElementById("plan3-p").innerHTML;
+
+const planPriceDu = document.querySelectorAll(".plan-d");
+const priceDurations = Array.from(planPriceDu).slice(0,3);
+
+var p1YrPrice;
+var p2YrPrice;
+var p3YrPrice;
+//function to multiple monthly value by 10
+function calcPlanPrice(p1Value,p2Value,p3Value){
+    p1YrPrice = p1Value * 10;
+    plan1Price = p1YrPrice;
+
+    p2YrPrice = p2Value * 10;
+    plan2Price = p2YrPrice;
+
+    p3YrPrice = p3Value * 10;
+    plan3Price = p3YrPrice;
+}
 
 plan1.addEventListener("click",function(){
     plan1.classList.add("plan-selected");
@@ -88,7 +111,7 @@ plan3.addEventListener("click",function(){
     plan3.classList.add("plan-selected");
     plan1.classList.remove("plan-selected");
     plan2.classList.remove("plan-selected");
-    plan = 1;
+    plan = 3;
 })
 
 var planDuBtn = document.getElementById("duration-btn");
@@ -107,6 +130,13 @@ planDuBtn.addEventListener("click",function(){
         freeMonTxt1.classList.remove("hide");//error
         freeMonTxt2.classList.remove("hide");
         freeMonTxt3.classList.remove("hide");
+
+        priceDurations.forEach(element => {//To change /mo text to /yr text in each plan div
+            element.innerHTML = "/yr";
+        })
+        calcPlanPrice(plan1Price,plan2Price,plan3Price);
+
+        duration = 1;//1= Monthly
     }
     else{
         planMonthly.classList.add("mon-active");
@@ -114,6 +144,12 @@ planDuBtn.addEventListener("click",function(){
         freeMonTxt1.classList.add("hide");//error
         freeMonTxt2.classList.add("hide");
         freeMonTxt3.classList.add("hide");
+
+        priceDurations.forEach(element => {//To change /yr text to /mo text in each plan div
+            element.innerHTML = "/mo";
+        })
+
+        duration = 2;//2 = Yearly
     }
 })
 
