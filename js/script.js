@@ -92,9 +92,20 @@ plan3.addEventListener("click",function(){
 })
 
 var planDuBtn = document.getElementById("duration-btn");
+var planMonthly = document.getElementById("monthly");
+var planYearly = document.getElementById("yearly");
+
 planDuBtn.onclick = function(){
     console.log("dur btn clicked");
     planDuBtn.classList.toggle("select-btn-yr")
+    if(planDuBtn.classList.contains("select-btn-yr")){//Check wheather the plan duration button was clicked or not
+        planMonthly.classList.remove("mon-active");
+        planYearly.classList.add("mon-active");
+    }
+    else{
+        planMonthly.classList.add("mon-active");
+        planYearly.classList.remove("mon-active");
+    }
 }
 
 var planBackBtn = document.getElementById("plan-back-btn");
