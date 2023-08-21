@@ -85,7 +85,7 @@ var plan3 = document.getElementById("plan-3");
 var plan3Price = document.getElementById("plan3-p");
 
 const planPriceDu = document.querySelectorAll(".plan-d");
-const priceDurations = Array.from(planPriceDu).slice(0,6);//This line responsible for changing all /mo into /yr and viseversa
+const priceDurations = Array.from(planPriceDu).slice(0,11);//This line responsible for changing all /mo into /yr and viseversa
 
 //function to multiple monthly values by 10
 function calcPlanPrice(p1Value,p2Value,p3Value){
@@ -292,6 +292,7 @@ addNextBtn.addEventListener("click",function(){
     addsContainer.classList.add("hide");
     tab4.classList.add("active-num-col");
     summContainer.classList.remove("hide");
+    finalizeSummary();
 });
 
 //---------------------------------------------------
@@ -324,8 +325,48 @@ var sumTotTime = document.getElementById("sum-bottom-time");
 var sumTotPrice = document.getElementById("sum-total-price");
 var sumTotDur = document.getElementById("sum-total-time");
 
-var sumBackBtn = document.getElementById("sumamry-back-btn");
+function finalizeSummary(){
+    if(plan == 1){
+        summaryPlan.innerHTML = "Arcade";
+    }
+    else if(plan == 2){
+        summaryPlan.innerHTML = "Advanced";
+    }
+    else if(plan == 3){
+        summaryPlan.innerHTML = "Pro";
+    }
+
+    if(duration == 1){
+        summaryDuration.innerHTML = "Yearly";
+    }
+    else if(duration == 2){
+        summaryDuration.innerHTML = "Monthly";
+    }
+
+    sumPlanPrice.innerHTML = planPrice;
+}
+
+//JS part for change button on summary container
+planChange.addEventListener("click",function(){
+    tab2.classList.add("active-num-col");
+    planContainer.classList.remove("hide");
+    tab4.classList.remove("active-num-col");
+    summContainer.classList.add("hide");
+});
+
+
+var sumBackBtn = document.getElementById("summary-back-btn");
 var sumNextBtn = document.getElementById("summary-confirm-btn");
 
-
+//JS part for back button on summary container
+sumBackBtn.addEventListener("click",function(){
+    tab3.classList.add("active-num-col");
+    addsContainer.classList.remove("hide");
+    tab4.classList.remove("active-num-col");
+    summContainer.classList.add("hide");
+});
+sumNextBtn.addEventListener("click",function(){
+    summContainer.classList.add("hide");
+    thanksContainer.classList.remove("hide");
+})
 
