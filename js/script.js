@@ -6,12 +6,16 @@ var tab2 = document.getElementById("num-2");
 var tab3 = document.getElementById("num-3");
 var tab4 = document.getElementById("num-4");
 
+//---------------------------------------------------
+
 //Main containers
 var formContainer = document.getElementById("form-container");
 var planContainer = document.getElementById("plan-container");
 var addsContainer = document.getElementById("adds-container");
 var summContainer = document.getElementById("summary-container");
 var thanksContainer = document.getElementById("thnx-container");
+
+//---------------------------------------------------
 
 //Form container variables
 var formProgress = 3;//Form container counter
@@ -60,6 +64,8 @@ frmNextBtn.addEventListener("click",function(){
         planContainer.classList.remove("hide");
     }
 })
+
+//---------------------------------------------------
 
 //Plan container variables
 var plan = 0;
@@ -199,6 +205,8 @@ planNextBtn.addEventListener("click",function(){
     }
 });
 
+//---------------------------------------------------
+
 //Addons container variables
 
 //Addon1
@@ -215,6 +223,8 @@ var addon3Check = document.getElementById("addon3-checkbox");
 
 var addBackBtn = document.getElementById("addons-back-btn");
 var addNextBtn = document.getElementById("addons-next-btn");
+
+//---------------------------------------------------
 
 //Summary  container variables
 var summaryPlan = document.getElementById("s-top-plan");
