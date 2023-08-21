@@ -326,6 +326,7 @@ var sumTotPrice = document.getElementById("sum-total-price");
 var sumTotDur = document.getElementById("sum-total-time");
 
 function finalizeSummary(){
+    //Sumamry heading plan type update
     if(plan == 1){
         summaryPlan.innerHTML = "Arcade";
     }
@@ -336,6 +337,7 @@ function finalizeSummary(){
         summaryPlan.innerHTML = "Pro";
     }
 
+    //Sumamry heading plan duration update
     if(duration == 1){
         summaryDuration.innerHTML = "Yearly";
     }
@@ -343,8 +345,10 @@ function finalizeSummary(){
         summaryDuration.innerHTML = "Monthly";
     }
 
+    //Sumamry heading plan price update
     sumPlanPrice.innerHTML = planPrice;
 
+    //Sumamry selected addons update
     if(addon1Selected == 1){
         sumAddon1.classList.remove("hide");
     }else{
@@ -362,6 +366,8 @@ function finalizeSummary(){
     }else{
         sumAddon3.classList.add("hide");
     }
+
+    
 }
 
 //JS part for change button on summary container
