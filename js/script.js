@@ -85,7 +85,7 @@ var plan3 = document.getElementById("plan-3");
 var plan3Price = document.getElementById("plan3-p");
 
 const planPriceDu = document.querySelectorAll(".plan-d");
-const priceDurations = Array.from(planPriceDu).slice(0,3);
+const priceDurations = Array.from(planPriceDu).slice(0,6);//This line responsible for changing all /mo into /yr and viseversa
 
 //function to multiple monthly values by 10
 function calcPlanPrice(p1Value,p2Value,p3Value){
@@ -161,6 +161,7 @@ planDuBtn.addEventListener("click",function(){
         plan3Price.innerHTML = 15;
         
         calcPlanPrice(plan1Price.innerHTML,plan2Price.innerHTML,plan3Price.innerHTML);
+        calcAddonPrice(addon1Price.innerHTML,addon2Price.innerHTML,addon3Price.innerHTML);
 
         duration = 1;//1= Yearly
     }
@@ -179,6 +180,10 @@ planDuBtn.addEventListener("click",function(){
         plan2Price.innerHTML = 12;
         plan3Price.innerHTML = 15;
 
+        addon1Price.innerHTML = 1;
+        addon2Price.innerHTML = 2;
+        addon3Price.innerHTML = 2;
+
         duration = 2;//2 = Monthly
     }
 })
@@ -186,6 +191,7 @@ planDuBtn.addEventListener("click",function(){
 var planBackBtn = document.getElementById("plan-back-btn");
 var planNextBtn = document.getElementById("plan-next-btn");
 
+//JS part for back button on plans container
 planBackBtn.addEventListener("click",function(){
     tab1.classList.add("active-num-col");
     formContainer.classList.remove("hide");
@@ -208,21 +214,85 @@ planNextBtn.addEventListener("click",function(){
 //---------------------------------------------------
 
 //Addons container variables
+var addon1Selected = 0;//1 = to selected and 0 = to not selected
+var addon2Selected = 0;
+var addon3Selected = 0;
+
+var totAddonCount = 0;
 
 //Addon1
 var addon1 = document.getElementById("addon-1");
 var addon1Check = document.getElementById("addon1-checkbox");
+var addon1Price = document.getElementById("addon1-price");
 
 //Addon2
 var addon2 = document.getElementById("addon-2");
 var addon2Check = document.getElementById("addon2-checkbox");
+var addon2Price = document.getElementById("addon2-price");
 
 //Addon3
 var addon3 = document.getElementById("addon-3");
 var addon3Check = document.getElementById("addon3-checkbox");
+var addon3Price = document.getElementById("addon3-price");
+
+function calcAddonPrice(a1Value,a2Value,a3Value){
+    addon1Price.innerHTML = (a1Value * 10);
+    addon2Price.innerHTML = (a2Value * 10);
+    addon3Price.innerHTML = (a3Value * 10);
+}
+
+// Get all the div elements with the class "checkbox-container"
+const checkboxContainers = document.querySelectorAll('.addons');
+
+// Loop through each div and add a click event listener
+checkboxContainers.forEach(container => {
+    // Get the checkbox element inside the current div
+    const checkbox = container.querySelector('input[type="checkbox"]');
+    
+    // Add a click event listener to the div
+    container.addEventListener('click', () => {
+        // Toggle the "checked" property of the checkbox
+        checkbox.checked = !checkbox.checked;
+        container.classList.toggle("addons-selected",checkbox.checked);
+    });
+});
 
 var addBackBtn = document.getElementById("addons-back-btn");
 var addNextBtn = document.getElementById("addons-next-btn");
+
+//JS part for back button on addons container
+addBackBtn.addEventListener("click",function(){
+    tab2.classList.add("active-num-col");
+    planContainer.classList.remove("hide");
+    tab3.classList.remove("active-num-col");
+    addsContainer.classList.add("hide");
+});
+addNextBtn.addEventListener("click",function(){
+    if(addon1Check.checked == true){
+        addon1Selected = 1;
+    }else{
+        addon1Selected = 0;
+    }
+    
+    if(addon2Check.checked == true){
+        addon2Selected = 1;
+    }else{
+        addon2Selected = 0;
+    }
+    
+    if(addon3Check.checked == true){
+        addon3Selected = 1;
+    }else{
+        addon3Selected = 0;
+    }
+    totAddonCount = addon1Selected + addon2Selected + addon3Selected;
+
+    console.log("Next page please. The addon count is " +totAddonCount);
+    tab3.classList.remove("active-num-col");
+    addsContainer.classList.add("hide");
+    tab4.classList.add("active-num-col");
+    summContainer.classList.remove("hide");
+});
 
 //---------------------------------------------------
 
