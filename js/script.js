@@ -65,34 +65,27 @@ frmNextBtn.addEventListener("click",function(){
 var plan = 0;
 var planProgress = 2;
 var planPrice = 0
-var duration = 0;//If the duration is 1 = Monthly, If the duration is 2 = Yearly
+//The by default duration sets to monthly value. Which is 2
+var duration = 2;//If the duration is 1 = Yearly, If the duration is 2 = Monthly
 
 //Plan1
 var plan1 = document.getElementById("plan-1");
-var plan1Price = document.getElementById("plan1-p").innerHTML;
+var plan1Price = document.getElementById("plan1-p");
 //Plan2
 var plan2 = document.getElementById("plan-2");
-var plan2Price = document.getElementById("plan2-p").innerHTML;
+var plan2Price = document.getElementById("plan2-p");
 //Plan2
 var plan3 = document.getElementById("plan-3");
-var plan3Price = document.getElementById("plan3-p").innerHTML;
+var plan3Price = document.getElementById("plan3-p");
 
 const planPriceDu = document.querySelectorAll(".plan-d");
 const priceDurations = Array.from(planPriceDu).slice(0,3);
 
-var p1YrPrice;
-var p2YrPrice;
-var p3YrPrice;
-//function to multiple monthly value by 10
+//function to multiple monthly values by 10
 function calcPlanPrice(p1Value,p2Value,p3Value){
-    p1YrPrice = p1Value * 10;
-    plan1Price = p1YrPrice;
-
-    p2YrPrice = p2Value * 10;
-    plan2Price = p2YrPrice;
-
-    p3YrPrice = p3Value * 10;
-    plan3Price = p3YrPrice;
+    plan1Price.innerHTML = (p1Value * 10);
+    plan2Price.innerHTML = (p2Value * 10);
+    plan3Price.innerHTML = (p3Value * 10);
 }
 
 plan1.addEventListener("click",function(){
@@ -100,18 +93,42 @@ plan1.addEventListener("click",function(){
     plan2.classList.remove("plan-selected");
     plan3.classList.remove("plan-selected");
     plan = 1;
+
+    if(duration == 1){
+        planPrice = 90;
+    }
+    else{
+        planPrice = 9;
+    }
+    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 plan2.addEventListener("click",function(){
     plan2.classList.add("plan-selected");
     plan1.classList.remove("plan-selected");
     plan3.classList.remove("plan-selected");
     plan = 2;
+
+    if(duration == 1){
+        planPrice = 120;
+    }
+    else{
+        planPrice = 12;
+    }
+    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 plan3.addEventListener("click",function(){
     plan3.classList.add("plan-selected");
     plan1.classList.remove("plan-selected");
     plan2.classList.remove("plan-selected");
     plan = 3;
+
+    if(duration == 1){
+        planPrice = 150;
+    }
+    else{
+        planPrice = 15;
+    }
+    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 
 var planDuBtn = document.getElementById("duration-btn");
@@ -122,7 +139,6 @@ var freeMonTxt2 = document.getElementById("plan2-free-txt");
 var freeMonTxt3 = document.getElementById("plan3-free-txt");
 
 planDuBtn.addEventListener("click",function(){
-    console.log("dur btn clicked");
     planDuBtn.classList.toggle("select-btn-yr")
     if(planDuBtn.classList.contains("select-btn-yr")){//Check wheather the plan duration button was clicked or not
         planMonthly.classList.remove("mon-active");
@@ -134,9 +150,13 @@ planDuBtn.addEventListener("click",function(){
         priceDurations.forEach(element => {//To change /mo text to /yr text in each plan div
             element.innerHTML = "/yr";
         })
-        calcPlanPrice(plan1Price,plan2Price,plan3Price);
+        plan1Price.innerHTML = 9;
+        plan2Price.innerHTML = 12;
+        plan3Price.innerHTML = 15;
+        
+        calcPlanPrice(plan1Price.innerHTML,plan2Price.innerHTML,plan3Price.innerHTML);
 
-        duration = 1;//1= Monthly
+        duration = 1;//1= Yearly
     }
     else{
         planMonthly.classList.add("mon-active");
@@ -149,7 +169,11 @@ planDuBtn.addEventListener("click",function(){
             element.innerHTML = "/mo";
         })
 
-        duration = 2;//2 = Yearly
+        plan1Price.innerHTML = 9;
+        plan2Price.innerHTML = 12;
+        plan3Price.innerHTML = 15;
+
+        duration = 2;//2 = Monthly
     }
 })
 
