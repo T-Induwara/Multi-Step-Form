@@ -617,6 +617,7 @@ form{
         width:7rem;
         flex-direction: column;
         justify-content: space-between;
+        align-items: start;
     }
     .free-mon-txt{
         font-size:12px;
