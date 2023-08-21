@@ -114,6 +114,7 @@ plan2.addEventListener("click",function(){
     else{
         planPrice = 12;
     }
+    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 plan3.addEventListener("click",function(){
     plan3.classList.add("plan-selected");
@@ -127,6 +128,7 @@ plan3.addEventListener("click",function(){
     else{
         planPrice = 15;
     }
+    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 
 var planDuBtn = document.getElementById("duration-btn");
@@ -185,7 +187,7 @@ planBackBtn.addEventListener("click",function(){
     planContainer.classList.add("hide");
 });
 planNextBtn.addEventListener("click",function(){
-    if(plan1.classList.contains("plan-selected") || plan2.classList.contains("plan-selected") || plan2.classList.contains("plan-selected") ){
+    if(plan1.classList.contains("plan-selected") || plan2.classList.contains("plan-selected") || plan3.classList.contains("plan-selected") ){
         console.log("Next page please. The count is " +planProgress);
         tab2.classList.remove("active-num-col");
         planContainer.classList.add("hide");
