@@ -344,6 +344,24 @@ function finalizeSummary(){
     }
 
     sumPlanPrice.innerHTML = planPrice;
+
+    if(addon1Selected == 1){
+        sumAddon1.classList.remove("hide");
+    }else{
+        sumAddon1.classList.add("hide");
+    }
+
+    if(addon2Selected == 1){
+        sumAddon2.classList.remove("hide");
+    }else{
+        sumAddon2.classList.add("hide");
+    }
+
+    if(addon3Selected == 1){
+        sumAddon3.classList.remove("hide");
+    }else{
+        sumAddon3.classList.add("hide");
+    }
 }
 
 //JS part for change button on summary container
@@ -353,7 +371,6 @@ planChange.addEventListener("click",function(){
     tab4.classList.remove("active-num-col");
     summContainer.classList.add("hide");
 });
-
 
 var sumBackBtn = document.getElementById("summary-back-btn");
 var sumNextBtn = document.getElementById("summary-confirm-btn");
