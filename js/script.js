@@ -63,7 +63,7 @@ frmNextBtn.addEventListener("click",function(){
 
 //Plan container variables
 var plan = 0;
-var planProgress = 2;
+var planProgress = 1;
 var planPrice = 0
 //The by default duration sets to monthly value. Which is 2
 var duration = 2;//If the duration is 1 = Yearly, If the duration is 2 = Monthly
@@ -114,7 +114,6 @@ plan2.addEventListener("click",function(){
     else{
         planPrice = 12;
     }
-    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 plan3.addEventListener("click",function(){
     plan3.classList.add("plan-selected");
@@ -128,7 +127,6 @@ plan3.addEventListener("click",function(){
     else{
         planPrice = 15;
     }
-    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 
 var planDuBtn = document.getElementById("duration-btn");
@@ -179,6 +177,25 @@ planDuBtn.addEventListener("click",function(){
 
 var planBackBtn = document.getElementById("plan-back-btn");
 var planNextBtn = document.getElementById("plan-next-btn");
+
+planBackBtn.addEventListener("click",function(){
+    tab1.classList.add("active-num-col");
+    formContainer.classList.remove("hide");
+    tab2.classList.remove("active-num-col");
+    planContainer.classList.add("hide");
+});
+planNextBtn.addEventListener("click",function(){
+    if(plan1.classList.contains("plan-selected") || plan2.classList.contains("plan-selected") || plan2.classList.contains("plan-selected") ){
+        console.log("Next page please. The count is " +planProgress);
+        tab2.classList.remove("active-num-col");
+        planContainer.classList.add("hide");
+        tab3.classList.add("active-num-col");
+        addsContainer.classList.remove("hide");
+    }
+    else{
+        alert("Please select a plan before go to the next step!");
+    }
+});
 
 //Addons container variables
 
