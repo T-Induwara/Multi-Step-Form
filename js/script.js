@@ -1,4 +1,4 @@
-console.log("Script loaded");
+
 
 //Tab number section variables
 var tab1 = document.getElementById("num-1");
@@ -57,7 +57,6 @@ frmNextBtn.addEventListener("click",function(){
     }
 
     if(formProgress == 3){
-        console.log("Next page please. The count is " +formProgress);
         tab1.classList.remove("active-num-col");
         formContainer.classList.add("hide");
         tab2.classList.add("active-num-col");
@@ -106,7 +105,6 @@ plan1.addEventListener("click",function(){
     else{
         planPrice = 9;
     }
-    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 plan2.addEventListener("click",function(){
     plan2.classList.add("plan-selected");
@@ -120,7 +118,6 @@ plan2.addEventListener("click",function(){
     else{
         planPrice = 12;
     }
-    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 plan3.addEventListener("click",function(){
     plan3.classList.add("plan-selected");
@@ -134,7 +131,6 @@ plan3.addEventListener("click",function(){
     else{
         planPrice = 15;
     }
-    console.log("Selected plan price is "+planPrice+" The duration is "+duration);
 })
 
 var planDuBtn = document.getElementById("duration-btn");
@@ -203,7 +199,6 @@ planBackBtn.addEventListener("click",function(){
 });
 planNextBtn.addEventListener("click",function(){
     if(plan1.classList.contains("plan-selected") || plan2.classList.contains("plan-selected") || plan3.classList.contains("plan-selected") ){
-        console.log("Next page please. The count is " +planProgress);
         tab2.classList.remove("active-num-col");
         planContainer.classList.add("hide");
         tab3.classList.add("active-num-col");
@@ -290,7 +285,6 @@ addNextBtn.addEventListener("click",function(){
     }
     totAddonCount = addon1Selected + addon2Selected + addon3Selected;
 
-    console.log("Next page please. The addon count is " +totAddonCount);
     tab3.classList.remove("active-num-col");
     addsContainer.classList.add("hide");
     tab4.classList.add("active-num-col");
