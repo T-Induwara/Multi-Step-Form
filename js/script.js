@@ -145,6 +145,9 @@ var freeMonTxt2 = document.getElementById("plan2-free-txt");
 var freeMonTxt3 = document.getElementById("plan3-free-txt");
 
 planDuBtn.addEventListener("click",function(){
+    plan1.classList.remove("plan-selected");
+    plan2.classList.remove("plan-selected");
+    plan3.classList.remove("plan-selected");
     planDuBtn.classList.toggle("select-btn-yr")
     if(planDuBtn.classList.contains("select-btn-yr")){//Check wheather the plan duration button was clicked or not
         planMonthly.classList.remove("mon-active");
@@ -425,4 +428,3 @@ sumNextBtn.addEventListener("click",function(){
     summContainer.classList.add("hide");
     thanksContainer.classList.remove("hide");
 })
-
