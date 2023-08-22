@@ -367,6 +367,20 @@ function finalizeSummary(){
         sumAddon3.classList.add("hide");
     }
 
+    var sumAd1 = 1;
+    var sumAd2 = 2;
+    var sumAd3 = 2;
+
+    //Addons price update
+    if(duration == 1){
+        sumAddon1Price.innerHTML = sumAd1 * 10;
+        sumAddon2Price.innerHTML = sumAd2 * 10;
+        sumAddon3Price.innerHTML = sumAd3 * 10;
+    }else{
+        sumAddon1Price.innerHTML = sumAd1;
+        sumAddon2Price.innerHTML = sumAd2;
+        sumAddon3Price.innerHTML = sumAd3;
+    }
     
 }
 
