@@ -321,6 +321,8 @@ var sumAddon3 = document.getElementById("summary-addon-3");
 var sumAddon3Price = document.getElementById("sum-addon3-price");
 var sumAddon3Dur = document.getElementById("sum-addon3-price");
 
+var sumBottomTotDur = document.getElementById("sum-bottom-time");
+
 var sumTotTime = document.getElementById("sum-bottom-time");
 var sumTotPrice = document.getElementById("sum-total-price");
 var sumTotDur = document.getElementById("sum-total-time");
@@ -376,10 +378,12 @@ function finalizeSummary(){
         sumAddon1Price.innerHTML = sumAd1 * 10;
         sumAddon2Price.innerHTML = sumAd2 * 10;
         sumAddon3Price.innerHTML = sumAd3 * 10;
+        sumBottomTotDur.innerHTML = "per yearly)";
     }else{
         sumAddon1Price.innerHTML = sumAd1;
         sumAddon2Price.innerHTML = sumAd2;
         sumAddon3Price.innerHTML = sumAd3;
+        sumBottomTotDur.innerHTML = "per monthly)";
     }
     
 }
