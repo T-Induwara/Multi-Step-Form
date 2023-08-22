@@ -373,7 +373,7 @@ function finalizeSummary(){
     var sumAd2 = 2;
     var sumAd3 = 2;
 
-    //Addons price update
+    //Summary addons price update
     if(duration == 1){
         sumAddon1Price.innerHTML = sumAd1 * 10;
         sumAddon2Price.innerHTML = sumAd2 * 10;
@@ -385,7 +385,22 @@ function finalizeSummary(){
         sumAddon3Price.innerHTML = sumAd3;
         sumBottomTotDur.innerHTML = "per monthly)";
     }
-    
+
+    //Summary total value update
+    var sumTotal = 0;
+    var sumadTotal = 0;
+    if(addon1Selected == 1){
+        sumadTotal = sumadTotal + parseInt(sumAddon1Price.innerHTML);
+    }
+    if(addon2Selected == 1){
+        sumadTotal = sumadTotal + parseInt(sumAddon2Price.innerHTML);
+    }
+    if(addon3Selected == 1){
+        sumadTotal = sumadTotal + parseInt(sumAddon3Price.innerHTML);
+    }
+    sumTotal = sumadTotal + parseInt(sumPlanPrice.innerHTML);
+
+    sumTotPrice.innerHTML = sumTotal;
 }
 
 //JS part for change button on summary container
